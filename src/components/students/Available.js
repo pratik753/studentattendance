@@ -27,10 +27,10 @@ const Available = ({ student }) => {
     console.log(endTime, "endTime");
     var date = new Date().toJSON();
     console.log(date, "currentDate");
-    let h1 = startTime.split(":")[0];
-    let h2 = endTime.split(":")[0];
-    let m1 = startTime.split(":")[1];
-    let m2 = endTime.split(":")[1];
+    let h1 = startTime?.split(":")[0];
+    let h2 = endTime?.split(":")[0];
+    let m1 = startTime?.split(":")[1];
+    let m2 = endTime?.split(":")[1];
     const d = new Date();
     let h = d.getHours();
     var m = d.getMinutes();
@@ -55,9 +55,9 @@ const Available = ({ student }) => {
     }
   };
   const dateTime = (inTime, outTime) => {
-    let dd = dateCheck(inTime.split("T")[0], outTime.split("T")[0]);
+    let dd = dateCheck(inTime?.split("T")[0], outTime?.split("T")[0]);
 
-    let tt = timeCheck(inTime.split("T")[1], outTime.split("T")[1]);
+    let tt = timeCheck(inTime?.split("T")[1], outTime?.split("T")[1]);
 
     return dd && tt;
   };
@@ -69,7 +69,7 @@ const Available = ({ student }) => {
     let today = date.split("T");
     console.log(today);
     var st = student.filter(function (data) {
-      return dateTime(data.inTime, data.outTime);
+      return dateTime(data?.inTime, data?.outTime);
     });
 
     return st.map((data) => (

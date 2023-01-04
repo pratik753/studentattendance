@@ -11,14 +11,14 @@ const Home = ({ nav }) => {
     {
       roll: 1,
       name: "pratik",
-      inTime: "2022-01-04T02:03",
+      inTime: "2022-01-04T00:03",
       outTime: "2023-02-04T23:59",
     },
     {
       roll: 2,
       name: "sonu",
-      inTime: "2022-01-04T02:03",
-      outTime: "2023-02-04T23:59",
+      inTime: "2022-01-01T00:03",
+      outTime: "2023-02-09T23:59",
     },
     {
       roll: 3,
